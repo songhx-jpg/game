@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I work as a software engineer at Microsoft STC Asia.">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8d466b87dc7f561c0909720478cac090";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shiv.js"></script>
+    <![endif]-->    <title>Opril Zeng</title>
+</head>
+<body class="home">
+
+<header id="header">
+    <div id="head" class="parallax" parallax-speed="4">
+        <h1 id="logo" class="text-center">
+            <img class="img-circle" src="/assets/images/oz.jpg" alt="">
+            <span class="title">Opril Zeng</span>
+            <span class="tagline">Software Engineer @ Microsoft</span>
+        </h1>
+    </div>
+
+    <script type="text/javascript">
+        var head = document.getElementById('head');
+        head.style.backgroundImage= 'url(/assets/images/bg_head'+(Math.ceil(Math.random()*3))+'.jpg)';
+    </script>
+<div class="navbar-container">
+    <nav class="navbar navbar-default navbar-sticky">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/about.php">About</a></li>
+                    <li><a href="/blog/" target="_blank">Blog</a></li>
+                    <li><a href="/z7.design" target="_blank">Z7.Design</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+</div>    </div>
+</header>
+<main id="main">
+    <div class="container">
+        <div class="row section topspace">
+            <div class="col-md-12">
+                <p class="lead text-center text-muted">Live and work harder than yesterday. </p>
+            </div>
+        </div> <!-- / section -->
+        
+        <div class="row section topspace">
+            <div class="panel panel-cta"><div class="panel-body">
+                <div class="col-sm-7 col-md-9 col-lg-9">
+                    <p>I work as a software engineer at Microsoft STC Asia.</p>
+                </div>
+                <div class="col-sm-5 col-md-3 col-lg-3 text-right">
+                    <a href="about.php" class="btn btn-primary btn-lg cv-btn" target="_blank">About Me</a>
+                </div>
+            </div></div>
+        </div> <!-- /section -->
+        <!--
+        <div class="row section recentworks topspace">
+            <h2 class="section-title"><span>Recent Works</span></h2>
+            <div class="thumbnails recentworks row">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a class="thumbnail" href="projects/fortune-divination.php">
+						<span class="img">
+							<img src="assets/images/fortune-divination.jpg" alt="">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+                        <span class="title">Fortune Divination</span>
+                    </a>
+                    <span class="description">2017.12 | 
+                        <a href="">Go</a></span>
+                    <span class="details">A little game for user to make a divination of fortune by submit his avatar.
+                    </span>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a class="thumbnail" href="projects/wealth-keeper.php">
+						<span class="img">
+							<img src="assets/images/wealth-keeper.jpg" alt="">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+                        <span class="title">Wealth Keeper</span>
+                    </a>
+                    <span class="description">2017.11 | 
+                        <a href="">Design</a> | <a href="">Backend (Go)</a></span>
+                    <span class="details">A mobile app desired to create a unique asset allocation solution for user by current situation.
+                    </span>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a class="thumbnail" href="projects/fis.php">
+						<span class="img">
+							<img src="assets/images/fis.jpg" alt="">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+                        <span class="title">Fund information system</span>
+                    </a>
+                    <span class="description">2017.8 | 
+                        <a href="">Prototype</a></span>
+                    <span class="details">A website to look up fund infomation.
+                    </span>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a class="thumbnail" href="projects/bdwm-wechat.php">
+						<span class="img">
+							<img src="assets/images/bdwm-wechat.jpg" alt="">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+                        <span class="title">Wechat pages</span>
+                    </a>
+                    <span class="description">2016.5 | 
+                        <a href="">Web design</a> | <a href="">PHP</a></span>
+                    <span class="details">Interactive pages for activities in the official Wechat account of BDWM BBS.
+                    </span>
+                </div>
+            </div>
+            <div class="thumbnails recentworks row">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a class="thumbnail" href="projects/postcarder.php">
+						<span class="img">
+							<img src="assets/images/postcarder.jpg" alt="">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+                        <span class="title">Postcarder</span>
+                    </a>
+                    <span class="description">2015.5 | <a href="">PHP</a></span>
+                    <span class="details">An auto-repost Weibo bot for postcard enthusiasts to spread the information.
+                    </span>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a class="thumbnail" href="projects/bdwm123.php">
+						<span class="img">
+							<img src="assets/images/bdwm123.jpg" alt="">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+                        <span class="title">BDWM123</span>
+                    </a>
+                    <span class="description">2014.9 | 
+                        <a href="">Web design</a></span>
+                    <span class="details">A navigation site for students in Peking University.<br>
+                    </span>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a class="thumbnail" href="projects/3min.php">
+						<span class="img">
+							<img src="assets/images/3min.jpg" alt="">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+                        <span class="title">Postcard guide</span>
+                    </a>
+                    <span class="description">2014.5 | 
+                        <a href="">Web design</a></span>
+                    <span class="details">A guide for newbie to learn exchanging postcards with strangers via Internet.<br>
+                    </span>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a class="thumbnail" href="projects/dynasties2048.php">
+						<span class="img">
+							<img src="assets/images/dynasties2048.jpg" alt="">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+                        <span class="title">Dynasties2048</span>
+                    </a>
+                    <span class="description">2014.3 | 
+                        <a href="">Web game</a></span>
+                    <span class="details">An adaptation from <a href="http://gabrielecirulli.github.io/2048" target="_blank">Gabriele Cirulli's 2048</a>.<br>
+                    </span>
+                </div>
+            </div>
+        </div> --><!-- /section -->
+        <!--
+        <div class="row section featured topspace">
+            <h2 class="section-title"><span>Personal Interests</span></h2>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <h3 class="text-center">Graphic Design</h3>
+                    <p>I have a wealth of experience in graphic design for campus activities. I also tried to make short videos.</p>
+                    <p class="text-center"><a href="/z7.design" class="btn btn-action" target="_blank">Portfolio</a></p>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <h3 class="text-center">Postcard Collection</h3>
+                    <p>I like to collect postcards from friends and strangers. I even operate a WeChat public account about postcard with more than 1,000 followers by myself.</p>
+                    <p class="text-center"><a href="https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NTgxNzQ0MA==&hid=2&sn=05da8b001f6b8d6f01ad7a2fafe8c058&uin=Mjk4MTY1MzIw" class="btn btn-action" target="_blank">Read the posts</a></p>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <h3 class="text-center">A Cappella</h3>
+                    <p>I'm a baritone and the former group leader in SEAbling Vocal Group from 2013 to 2016, which is one of vocal groups from A Cappella Club of PKU.</p>
+                    <p class="text-center"><a href="http://i.youku.com/i/UMTU0ODA0MjAzMg==" class="btn btn-action" target="_blank">Watch the videos</a></p>
+                </div>
+            </div>
+        </div>
+        -->
+        <!-- / section -->
+
+    </div>	<!-- /container -->
+
+</main>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 widget">
+                <h3 class="widget-title">Contact</h3>
+                <div class="widget-body">
+                    <p>
+                        <a href="mailto:#">oprilzeng<i class="fa fa-at fa-1"></i>163.com</a><br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3 widget">
+                <h3 class="widget-title">Find me at</h3>
+                <div class="widget-body">
+                    <p class="follow-me-icons">
+                        <a href="http://weibo.com/compileerror" target="_blank"><i class="fa fa-weibo fa-2"></i></a>
+                        <a href="http://facebook.com/oprilzeng" target="_blank"><i class="fa fa-facebook fa-2"></i></a>
+                        <a href="https://www.linkedin.com/in/qiqi-zeng/" target="_blank"><i class="fa fa-linkedin fa-2"></i></a>
+                        <a href="http://instagram.com/oprilzeng" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 widget">
+            </div>
+
+        </div> <!-- /row of widgets -->
+    </div>
+</footer>
+
+<footer id="underfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-6 widget">
+                <p>Copyright &copy; 2012–2022, Opril Zeng</p>
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-6 widget">
+                <p class="text-right">
+                    Themed by <a href="http://www.gettemplate.com" rel="designer">Initio</a></p>
+            </div>
+        </div> <!-- /row of widgets -->
+    </div>
+</footer>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/template.js"></script>
+</body>
+</html>
