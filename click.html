@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Clicker</title>
+		<style>
+			button.f{
+				background-color: aqua;
+				color: black;
+			}
+			button{
+				background-color: black;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align: center;">让 手 <s>废 掉</s> 狂 喜 的 游 戏</h1>
+		<a style="position: absolute; right: 5px; top: 5px; font-size: 30px;" href="index.html">目录连接</a>
+		<div>
+			<button type="button" id="APLLY">自定义沙袋</button>
+			<br/>
+			<br/>
+			<button class="f" type="button" style="font-size: 48px;" id="bt1">打<span id="pers"></span>！！已经打了<span id="Ht"></span>次</button>
+			<br/>
+			<button type="button" style="display:none; font-size: 30px;" id="bt2">连环掌，每打一次可以多打<span id="QwQ"></span>下,需要<span id="cost"></span>次打击</button>
+			&nbsp;&nbsp;&nbsp;
+			<button type="button" style="display: none; font-size: 30px;" id="bt3">寸拳，解锁暴击，需要500次打击</button>
+			<br/>
+			<button type="button" style="display: none; font-size: 24px;" id="bt4">悟道，1500次打击，有几率成功，现在悟了天启<span id="le"></span>层，每层多打1下</button>
+			<br/>
+			<button type="button" style="display: none; font-size: 28px;" id="bt5">收徒弟，10000次打击，每点击一次打<span id="T"></span>拳</button>
+			<br/>
+			<div style="display: none;" id="fire"><button type="button" style="font-size: 24px;" id="ene">火元素训练，<span id="cost2"></span>次打击</button><span id="fir"></span>/10</div>
+			<br/>
+			<button class="f" style="display: none; font-size: 48px;" id="bt6">对<span id="pers2"></span>进行火焰攻击，已经打了<span id="fat"></span>次</button>&nbsp;&nbsp;&nbsp;<button style="display: none;" id="exc">用打击兑换火焰打击，汇率100000:1</button>
+			<br/>
+			<br/>
+			<div id="shop" style="display: none;">
+				<h2>商店</h2>
+				<div id="fg">
+					烈焰拳套，+10暴击率，限购1件&nbsp;&nbsp;&nbsp;<button id="b1">购买，花费100000次火焰打击</button>
+				</div>
+				<br/>
+				<div id="foxtail">
+					火狐尾，解锁烈焰区域，火焰攻击每次多打1下，限购1件&nbsp;&nbsp;&nbsp;<button id="b2">购买，花费500000次火焰打击</button>
+				</div>
+				<br/>
+				<div id="waf">
+					水火珠，解锁水元素训练，火元素攻击每次多打3下，限购1件&nbsp;&nbsp;&nbsp;<button id="b3">购买，花费2000000次火焰打击</button>
+				</div>
+				<br/>
+				<div id="dlb">
+					坑钱大礼包，获得10～99999个火焰打击，不限购&nbsp;&nbsp;&nbsp;<button id="b4">购买，花费10000000次打击</button>
+				</div>
+			</div>
+			<script>
+				var clicks = 0;
+				var glist = [10,10,10,10,10,10,10,20,20,20,20,20,20,20,30,30,30,30,100,100,100,100,150,150,150,150,200,200,200,256,256,256,299,299,389,389,444,444,14524,99999];//40
+				var fa = 0;
+				var llevel = 1;
+				var hand = 11;
+				var costs = 50;
+				var aut = false;
+				var ds = "道格拉斯";
+				var dao = 1;
+				var ck = 1;
+				var cf = 100000;
+				var cl = 0;
+				document.getElementById('pers').innerHTML = ds;
+				document.getElementById('pers2').innerHTML = ds;
+				document.getElementById('Ht').innerHTML = clicks;
+				document.getElementById('bt1').onclick = function () {
+					clicks += ck * llevel + dao - 1;
+					if (aut == true){
+						if (Math.floor(Math.random() * 10) == 1 || Math.floor(Math.random() * 10) == 1 == hand) {
+							clicks+=llevel*6;
+							document.getElementById('bt1').style = "font-size: 48px; color: red;";
+							setTimeout(function () {
+								document.getElementById('bt1').style = "font-size: 48px";
+							}, 150);
+						}
+					}
+					document.getElementById('Ht').innerHTML = clicks;
+					if(clicks == 50 || clicks == 10000000001) {
+						document.getElementById('bt2').style = "font-size: 30px;";
+						document.getElementById('bt3').style = "font-size: 30px;";
+						document.getElementById('QwQ').innerHTML = llevel;
+						document.getElementById('cost').innerHTML = costs;
+					}
+					if(clicks >= 100000 && fa > 0){
+						document.getElementById('exc').style = "font-size: 16px";
+					}
+				}
+				document.getElementById('APLLY').onclick = function () {
+					ds = prompt("请输入自定义沙袋", ds);
+					document.getElementById('pers').innerHTML = ds;
+					document.getElementById('pers2').innerHTML = ds;
+				}
+				document.getElementById('bt2').onclick = function () {
+					if(clicks >= costs) {
+						llevel+=1;
+						clicks-=costs;
+						costs+=llevel * Math.ceil(Math.random() * 5 + llevel);
+						document.getElementById('QwQ').innerHTML = llevel;
+						document.getElementById('cost').innerHTML = costs;
+						document.getElementById('Ht').innerHTML = clicks;
+					} else {
+						alert("打击不足，请继续打!");
+					}
+				}
+				document.getElementById('bt3').onclick = function () {
+					if(clicks >= 500) {
+						aut = true;
+						clicks -= 500;
+						document.getElementById('Ht').innerHTML = clicks;
+						document.getElementById('bt3').style = "display: none;";
+						document.getElementById('bt4').style = "font-size: 24px";
+						document.getElementById('le').innerHTML = dao;
+					}
+					else alert("打击不足，请继续打！");
+				}
+				document.getElementById('bt4').onclick = function () {
+					if(clicks >= 1500){
+						clicks -= 1500;
+						document.getElementById('Ht').innerHTML = clicks;
+						if(Math.floor(Math.random() * 7) <= 3){
+							alert("恭喜，悟道成功");
+							dao+=1;
+							document.getElementById('le').innerHTML = dao;
+						} else {
+							alert("很遗憾，悟道失败");
+						}
+					} else {
+						alert("打击不足，请继续打！");
+					}
+					if (dao == 10){
+						document.getElementById('bt5').style = "font-size: 28px";
+						document.getElementById('T').innerHTML = ck;
+					}
+				}
+				document.getElementById('bt5').onclick = function () {
+					if (clicks >= 10000){
+						clicks -= 10000;
+						document.getElementById('Ht').innerHTML = clicks;
+						ck+=1;
+						document.getElementById('T').innerHTML = ck;
+					} else {
+						alert("打击不足，请继续打！");
+					}
+					if (ck == 5) {
+						document.getElementById('fire').style = "";
+						document.getElementById('fir').innerHTML = cl;
+						document.getElementById('cost2').innerHTML = cf;
+					}
+				}
+				document.getElementById('ene').onclick = function () {
+					if (cl == 10) {
+						alert("已经满级！");
+						return;
+					}
+					if(clicks >= cf){
+						clicks -= cf;
+						document.getElementById('Ht').innerHTML = clicks;
+						cf += cl * 1000 * Math.floor(Math.random() * 5);
+						cl+=1;
+						document.getElementById('fir').innerHTML = cl;
+						document.getElementById('cost2').innerHTML = cf;
+					} else {
+						alert("打击不足，请继续打！");
+					}
+					if (cl == 10) {
+						document.getElementById('bt6').style = "font-size: 48px";
+						document.getElementById('fat').innerHTML = fa;
+						document.getElementById('shop').style = "";
+					}
+				}
+				document.getElementById('bt6').onclick = function () {
+					fa += 1;
+					document.getElementById('fat').innerHTML = fa;
+					if(clicks >= 100000 && fa > 0){
+						document.getElementById('exc').style = "font-size: 16px";
+					}
+				}
+				document.getElementById('exc').onclick = function () {
+					var nums = prompt("请输入您要转换的火焰打击个数", Math.floor(clicks / 100000));
+					if(Math.floor(nums+0) * 100000 <= clicks){
+						fa+=Math.floor(nums+0);
+						clicks-=Math.floor(nums+0);
+					} else {
+						alert("打击不足，请调整数值或继续打击！！");
+					}
+				}
+				document.getElementById('fg').onclick = function () {
+					if(fa >= 100000){
+						fa-=100000;
+						document.getElementById('fat').innerHTML = fa;
+						hand = 1;
+					} else {
+						alert("火焰打击不足！！");
+					}
+				}
+				document.getElementById('foxtail').onclick = function () {
+					alert('暂未开放');
+				}
+				document.getElementById('waf').onclick = function () {
+					alert('暂未开放');
+				}
+				document.getElementById('dlb').onclick = function () {
+					if(clicks >= 10000000){
+						clicks-=10000000;
+						document.getElementById('Ht').innerHTML = clicks;
+						var r = Math.floor(Math.random() * 40);
+						fa+=glist[r];
+						alert("恭喜获得" + (glist[r]+"") + "个火焰打击");
+					} else alert("您的打击不够！！");
+				}
+			</script>
+		</div>
+		
+	</body>
+</html>

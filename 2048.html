@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048 Version Giao</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <meta property="og:title" content="2048 game"/>
+  <meta property="og:site_name" content="2048 game"/>
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3290e1dc5e226cc3060d216dfa95290d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<img border="0" src="meta/apple-touch-icon.png" width="0" height="0">
+<div id="bg" onclick="javascript:fadeWechat();"><div class="bgtext">点击右上角，“分享到朋友圈”或“发送给好友”↑</div></div>
+<script type="text/javascript">
+function isWechat(){ 
+	var ua = window.navigator.userAgent.toLowerCase(); 
+	if(ua.match(/MicroMessenger/i) == 'micromessenger'){ 
+		var bg = document.getElementById("bg");
+		bg.style.display = "block";
+	}
+} 
+function fadeWechat(){ 
+	var ua = window.navigator.userAgent.toLowerCase(); 
+	if(ua.match(/MicroMessenger/i) == 'micromessenger'){ 
+		var bg = document.getElementById("bg");
+		bg.style.display = "none";
+	}
+} 
+
+function hideSaveShow(){ 
+document.getElementById("savellshow").innerHTML = " ";
+}
+function hideLoadShow(){ 
+document.getElementById("loadllshow").innerHTML = " ";
+}
+</script>
+  <div class="container">
+    <div class="heading">
+      <div>
+        <h1 class="title">2048Giao版</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="index.html">目录连接</a>
+        <br>
+        <h2>一起嗨！</h2>
+      </div>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="retry-button">再来一次</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+<div class="aqr"></div>
+    <p class="game-explanation">	
+          <a class="savebtn">保存档案</a>
+		  <input id="savell" onfocus="this.select()" onmouseover="this.focus()" readOnly="true" style="width:280px; height:22px;" />
+<div id="savellshow" > </div>
+<br>
+          <a class="loadbtn">读取档案</a>
+		  <input id="loadll" style="width:280px; height:22px;" value="在此处输入档案码，读取档案" />
+<div id="loadllshow" > </div>
+<hr>
+      <strong class="important">规则:</strong> 使用 <strong>上下左右键</strong> 移动方块（触屏设备请直接滑动手指），相同的两个方块合并后会变成 <strong>更新的一个</strong>
+      <br>
+      <button id="ret" style="font-size: 20px;">重in开ri</button>
+    </p>
+    <a href="https://s.click.ele.me/t?e=-s022aEBo12q1loFAOsIqhNttlHkcYLLPa0gr8DvjQ1yLOQJZJYD9vMQsaX03RgPFb70zKZp1bk0U2p5JsHkIfSLMkJoiOUPU7SiHG0WLzKuLbpgF8BKkFceUYVlbYRCwf3apg6bwznrTZsyXgMWKn6heR4xl8850bCj5PlrceMWOpnmrKrTMjJBuCsH9F6kzo8BfrMWGhzrg0VhUe2q8ojwOOT8todrhmMJ8e3zo3A9rjkpmr5RLnXfIE7kTkeYzNpUr8NVF7o7GuKa9&traffic_flag=lm&scm=20140618.1.01010001.s101c6&union_lens=lensId%3AAPP%401588603602%400b0ae47d_108a_171e0274805_b671%4002vHC3buDNLuCsrNbgGGwMa&un=72a969a71b7204ddbbeeeafdb2768e28&share_crt_v=1&ut_sk=1.utdid_null_1588603602975.TaoPassword-Outside.lianmeng-app&spm=a2159r.13376465.0.0&sp_tk=77+lTUNRRjFNYlpHZXbvv6U=&cpp=1&shareurl=true&short_name=h.Vjy2zjq" target="_blank"><div class="jdb"></div></a>
+	<hr>
+	<p>
+    <strong class="important">Note:</strong> This is a fork from <a href="http://gabrielecirulli.github.io/2048">http://gabrielecirulli.github.io/2048</a> created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a></p>    
+	</div>
+
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_score_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  <script src="../../jquery.js"></script>
+  <script src="../js/clipboard.min.js"></script>
+   
+    
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F63420b9558ce85b4619e0f4f1877517d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<img border="0" src="style/131072.jpg" width="0" height="0"><img border="0" src="style/65536.jpg" width="0" height="0">
+<script>
+  document.getElementById('ret').onclick = function () {
+    window.location.href = "2048.html";
+  }
+</script>
+</body>
+</html>
