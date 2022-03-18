@@ -458,8 +458,8 @@ hr {
     background: #ffe07d;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); }
   .tile.tile-2048 .tile-inner {
-    color: #f9f6f2;
-    background: url(fqd.png);
+    color: white;
+    background: rgb(128, 128, 10);
     line-height:40px;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); }
   .tile.tile-4096 .tile-inner {
